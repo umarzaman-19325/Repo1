@@ -1,0 +1,28 @@
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebDriver.Timeouts;
+
+public class SelIntroduction {
+
+	public static void main(String[] args) {
+		// Invoking browser
+		System.setProperty("webdriver.chrome.driver", "D://Selenium Downloads//chromedriver//chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("https://rahulshettyacademy.com");
+		driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
+		driver.getTitle();
+		System.out.println(driver.getTitle());
+		driver.getCurrentUrl();
+		System.out.println(driver.getCurrentUrl());
+		driver.close();
+		//close driver
+		driver.quit();
+		
+
+	}
+
+}

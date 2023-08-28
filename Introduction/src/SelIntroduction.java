@@ -13,6 +13,7 @@ public class SelIntroduction {
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://rahulshettyacademy.com");
+		//implicit wait
 		driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
 		driver.getTitle();
 		System.out.println(driver.getTitle());
